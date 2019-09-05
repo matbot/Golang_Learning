@@ -1,3 +1,5 @@
+/* Language syntax basics for Golang */
+
 package main
 
 import "fmt"
@@ -5,7 +7,7 @@ import "fmt"
 func main() {
 	//For Loops
 	//Classic var; condition; increment Loop
-	for i := 1;i <= 3; i++ {
+	for i := 1; i <= 3; i++ {
 		fmt.Println(i)
 	}
 	//While True Endless Loop
@@ -14,7 +16,7 @@ func main() {
 		break
 	}
 	//Loop with Continue
-	for i:=0; i<=5; i++ {
+	for i := 0; i <= 5; i++ {
 		if i%2 == 0 {
 			continue
 		}
@@ -36,7 +38,6 @@ func main() {
 	fmt.Println(s)
 	const n = 5000
 	fmt.Println(n)
-
 
 	//Simple Variables
 	var a = "initial"
