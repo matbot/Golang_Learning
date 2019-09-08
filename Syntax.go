@@ -1,10 +1,58 @@
-/* Language syntax basics for Golang */
+/* Language syntax basics for Golang
+based on gobyexample.com exercises
+*/
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
+	// Arrays
+
+	//Switch Statements
+	switchInteger := 2
+	fmt.Print("Write ", switchInteger, " as ")
+	switch switchInteger {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	}
+
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("It's the weekend!")
+	default:
+		fmt.Println("It's a weekday :(")
+	}
+
+	nowTime := time.Now()
+	switch {
+	case nowTime.Hour() < 12:
+		fmt.Println("It's before noon.")
+	default:
+		fmt.Println("It's afternoon.")
+	}
+
+	whatAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case bool:
+			fmt.Println("Booly")
+		case int:
+			fmt.Println("Intish")
+		default:
+			fmt.Printf("Unknown type %T\n", t)
+		}
+	}
+	whatAmI(true)
+	whatAmI(1)
+	whatAmI("hey")
+
 	//For Loops
 	//Classic var; condition; increment Loop
 	for i := 1; i <= 3; i++ {
