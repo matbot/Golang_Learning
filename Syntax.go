@@ -1,5 +1,5 @@
 /* Language syntax basics for Golang
-based on gobyexample.com exercises
+Learning directly from gobyexample.com exercises
 */
 
 package main
@@ -10,7 +10,25 @@ import (
 )
 
 func main() {
+	// Slices
+
 	// Arrays
+	var emptyArray [5]int
+	fmt.Println("emptyLength:", len(emptyArray))
+	fmt.Println("emptyContents:", emptyArray)
+	emptyArray[4] = 100
+	fmt.Println("updatedSet:", emptyArray)
+
+	declarativeArray := [5]int{1, 2, 3, 4, 5}
+	fmt.Println("declarativeArray:", declarativeArray)
+
+	var twoDimensionalArray [2][3]int
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			twoDimensionalArray[i][j] = i + j
+		}
+	}
+	fmt.Println("2dArray:", twoDimensionalArray)
 
 	//Switch Statements
 	switchInteger := 2
